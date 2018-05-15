@@ -7,6 +7,15 @@ use Cryptocurrency\Task3\MarketHtmlPresenter;
 
 // Fill in your market with currencies and use your presenter to show data here:
 $market = new CoinMarket();
+$market->addCurrency(
+        new \Cryptocurrency\Task1\Bitcoin(12)
+);
+$market->addCurrency(
+    new \Cryptocurrency\Task1\Ethereum(10)
+);
+$market->addCurrency(
+    new \Cryptocurrency\Task1\Dogecoin(5)
+);
 $marketPresenter = new MarketHtmlPresenter();
 $presentation = $marketPresenter->present($market);
 
